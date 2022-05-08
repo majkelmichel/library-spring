@@ -10,6 +10,12 @@ public class BookDto implements Serializable {
     private final Date publicationDate;
     private final Long authorId;
 
+    /**
+     * @param id Long
+     * @param title String
+     * @param publicationDate Date
+     * @param authorId Long | id of book author
+     */
     public BookDto(Long id, String title, Date publicationDate, Long authorId) {
         this.id = id;
         this.title = title;

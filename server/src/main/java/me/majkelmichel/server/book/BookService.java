@@ -62,7 +62,7 @@ public class BookService {
     public BookDto updateBook(Long id, BookCreationDto updatedBook) {
         Book book = bookRepository
                 .findById(id)
-                .orElseThrow(() -> new BookDoesNotExistException(updatedBook.getAuthorId()));
+                .orElseThrow(() -> new BookDoesNotExistException(id));
 
         Author author = authorRepository
                 .findById(updatedBook.getAuthorId())
